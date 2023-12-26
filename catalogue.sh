@@ -6,12 +6,15 @@ echo -e "\e[32mInstalling nodejs server\e[0m"
 dnf install nodejs -y
 echo -e "\e[32mAdd user roboshop\e[0m"
 useradd roboshop
+rm -rf /app
+mkdir /app
+cd /app
 echo -e "\e[32mDownload the application\e[0m"
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 echo -e "\e[32mchanged the dir\e[0m"
-cd /app
 echo -e "\e[32mUnzip the file\e[0m"
 unzip /tmp/catalogue.zip
+pwd
 echo -e "\e[32mInstalling npm server\e[0m"
 npm install
 echo -e "\e[32mCopying the configuration file\e[0m"
