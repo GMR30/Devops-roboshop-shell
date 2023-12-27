@@ -30,5 +30,5 @@ cp /root/Devops-roboshop-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>/tm
 echo -e "\e[32mInstalling mongodb-org-shell\e[0m"
 dnf install mongodb-org-shell -y  &>>/tmp/roboshop.log
 echo -e "\e[32mChanged the schema\e[0m"
-mongo --host mongodb-dev.gmracademy.in.net </app/schema/catalogue.js  &>>/tmp/roboshop.log
+mongo --host mongodb-dev.gmracademy.in.net </app/schema/user.js  &>>/tmp/roboshop.log
 
