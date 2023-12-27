@@ -14,6 +14,7 @@ curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip
 echo -e "\e[32mchanged the dir\e[0m"
 echo -e "\e[32mUnzip the file\e[0m"
 unzip /tmp/user.zip &>>/tmp/roboshop.log
+#present directory
 pwd
 echo -e "\e[32mInstalling npm server\e[0m"
 npm install  &>>/tmp/roboshop.log
