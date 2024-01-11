@@ -1,6 +1,7 @@
 echo -e "\e[32mDisable the mysql module\e[0m"
 dnf module disable mysql -y
 echo -e "\e[32mInstall the mysql community server\e[0m"
+cp /root/Devops-roboshop-shell/mysql.repo /etc/yum.repos.d/mysql.repo
 dnf install mysql-community-server -y
 echo -e "\e[32mmysql service enabled \e[0m"
 systemctl enable mysqld
