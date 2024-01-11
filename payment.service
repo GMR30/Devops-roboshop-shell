@@ -8,7 +8,7 @@ Environment=CART_HOST=cart-dev.gmracademy.in.net
 Environment=CART_PORT=8080
 Environment=USER_HOST=user-dev.gmracademy.in.net
 Environment=USER_PORT=8080
-Environment=AMQP_HOST=cart-dev.gmracademy.in.net
+Environment=AMQP_HOST=rabbitmq-dev.gmracademy.in.net
 Environment=AMQP_USER=roboshop
 Environment=AMQP_PASS=roboshop123
 
