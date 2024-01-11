@@ -14,13 +14,13 @@ echo -e "\e[32mCleaning the package\e[0m"
 mvn clean package
 echo -e "\e[32mMoving the jar file\e[0m"
 mv target/shipping-1.0.jar shipping.jar
-echo -e "\e[32mCopying the shipping service\e[0m"
-cp /root/Devops-roboshop-shell/shipping.service   /etc/systemd/system/shipping.service
 
 echo -e "\e[32mInstall the mysql\e[0m"
 dnf install mysql -y
 echo -e "\e[32mgetting the passwd from shipping \e[0m"
 mysql -h mysql-dev.gmracademy.in.net -uroot -pRoboShop@1 < /app/schema/shipping.sql
+echo -e "\e[32mCopying the shipping service\e[0m"
+cp /root/Devops-roboshop-shell/shipping.service   /etc/systemd/system/shipping.service
 echo -e "\e[32mstating the services\e[0m"
 systemctl daemon-reload
 systemctl enable shipping
